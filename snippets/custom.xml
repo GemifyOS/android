@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="gem"
+           fetch="https://github.com/GemifyOS"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/qpr2" />
+
+  <remote name="devices"
+          fetch="https://github.com/GemifyOS-devices/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fifteen" />
+
+  <remote name="devices-gitlab"
+          fetch="https://gitlab.com/GemifyOS-devices/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fifteen" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fifteen" />
+  
+  <remote  name="evo-codeberg"
+           fetch="https://codeberg.org/Evolution-X"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/vic" />
+
+  <!-- Art -->
+  <project path="art" name="android_art" groups="pdk" remote="gem" />
+  <project path="vendor/official_devices" name="official_devices" revision="fifteen" remote="gem" />
+
+  <!-- Bionic -->
+  <project path="bionic" name="android_bionic" groups="pdk" remote="gem" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="gem" />
+
+  <!-- Build -->
+  <project path="build/bazel" name="android_build_bazel" groups="pdk" remote="gem" >
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="bazel.BUILD" dest="BUILD" />
+  </project>
+
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="gem" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="gem" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="gem" />
+
+  <!-- External -->
+  <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="gem" />
+  <project path="external/tigervnc" name="android_external_tigervnc" groups="pdk" remote="gem" />
+  <project path="external/piex" name="android_external_piex" groups="pdk" remote="gem" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="gem" />
+  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" groups="qcom,lanai-vendor" remote="gem" revision="lineage-22.2" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="gem" />
+  <project path="frameworks/base" name="android_frameworks_base-new" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gem" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gem" />
+  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="gem" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="gem" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="gem" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="gem" />
+  <project path="packages/apps/BtHelper" name="android_packages_apps_BtHelper" remote="gem" />
+  <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="gem" />
+  <project path="packages/apps/DesktopMode" name="android_packages_apps_DesktopMode" remote="gem" />
+  <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="gem" />
+  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="gem" />
+  <project path="packages/services/VncFlinger" name="android_packages_services_VncFlinger" remote="gem" />
+  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="gem" />
+  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="gem" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="gem" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="gem" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="gem" />
+  <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="gem" />
+  <project path="packages/apps/Personalizations" name="android_packages_apps_Personalizations" remote="gem" />
+  <project path="packages/apps/VendorSupport" name="android_packages_apps_VendorSupport" groups="pdk-fs" remote="gem" />
+  <project path="packages/apps/SystemUIFlagFlipper" name="android_packages_apps_SystemUIFlagFlipper" remote="gem" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="gem"/>
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="gem" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gem" />
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="gem" />
+  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="gem" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="gem" />
+  <project path="packages/modules/Permission" name="android_packages_modules_Permission" remote="gem" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="gem" />
+
+  <!-- SDK -->
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="gem" />
+
+  <!-- Sepolicy -->
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="gem" />
+
+  <!-- System -->
+  <project path="system/core" name="android_system_core" groups="pdk" remote="gem" />
+  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="gem" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="gem" />
+  <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="gem" />
+
+  <!-- Vendor -->
+  <project path="vendor/addons" name="android_vendor_addons" remote="gem" />
+  <project path="vendor/google/overlays/ThemeIcons" name="android_vendor_google_overlays_ThemeIcons" remote="gem" />
+  <project path="vendor/gms" name="vendor_gms" remote="evo-codeberg" clone-depth="1" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="gem" />
+  <project path="vendor/pixel-style" name="android_vendor_pixel-style" remote="gem" />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="gem" />
+  <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="gem" />
+  <project path="vendor/microg" name="android_vendor_microg" remote="gem" />
+</manifest>

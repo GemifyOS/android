@@ -1,0 +1,93 @@
+<p align="center">
+<img src="https://github.com/GemifyOS/android/blob/lineage-22.2/GemifyOS_banner.png">
+</p>
+
+Base Firmware
+---------------
+[**LineageOS Android**](https://github.com/LineageOS)
+
+Getting Started
+---------------
+**Initialize local repository**
+```bash
+repo init -u https://github.com/GemifyOS/android -b lineage-22.2 --git-lfs
+```
+
+**Sync up with this command:**
+```bash
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
+```
+
+Preparing device for building risingOS
+---------------
+**Inherit LineageOS Vendor stuff**
+```bash
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+```
+
+GMS Flags
+---------------
+```bash
+# GMS build flags, true by default
+# Ship with GMS packages, replaces default AOSP packages with Google manufactured packages.
+WITH_GMS := true/false
+
+# CORE build flags
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+
+# VANILLA only build flags
+WITH_GMS := false
+
+# VANILLA build with MICROG
+WITH_GMS := false
+WITH_MICROG := true
+
+
+# These flags needs WITH_GMS set to true
+# Whether to ship pixel launcher and set it as default launcher, false by default
+TARGET_DEFAULT_PIXEL_LAUNCHER := true/false 
+
+```
+
+Building the firmware
+---------------
+**Setting up environment**
+```bash
+. build/envsetup.sh
+```
+
+```bash
+brunch devicecodename
+```
+
+redits
+---------------
+* [**AOSPA**](https://github.com/AOSPA)
+* [**AICP**](https://github.com/AICP)
+* [**Bootleggers**](https://github.com/BootleggersROM)
+* [**crDroid**](https://github.com/crdroidandroid)
+* [**Corvus-AOSP**](https://github.com/Corvus-AOSP)
+* [**Derpfest**](https://github.com/DerpFest-AOSP)
+* [**DivestOS**](https://github.com/Divested-Mobile)
+* [**DotOS**](https://github.com/DotOS)
+* [**Evolution-X**](https://github.com/Evolution-X)
+* [**Flamingo-OS**](https://github.com/Flamingo-OS)
+* [**LeafOS**](https://github.com/LeafOS-Project)
+* [**LineageOS**](https://github.com/LineageOS)
+* [**Octavi-OS**](https://github.com/Octavi-OS)
+* [**Omnirom**](https://github.com/omnirom)
+* [**PixelDust Caf**](https://github.com/pixeldust-project-caf)
+* [**Project-Fluid**](https://github.com/Project-Fluid)
+* [**Project Kaleidoscope**](https://github.com/Project-Kaleidoscope)
+* [**Project Radiant**](https://github.com/ProjectRadiant)
+* **RiceDroid**
+* **risingOS**
+* [**minaripenguin**](https://github.com/minaripenguin)
+* [**AxionAOSP**](https://github.com/AxionAOSP)
+* [**SparkOS**](https://github.com/Spark-Rom)
+* [**StagOS**](https://github.com/StagOS)
+* [**Xdroid-OSS**](https://github.com/xdroid-oss)
+* [**Mohammad Kibria (for the original source)**](https://github.com/kibria5)
+* [**RisingOS-Revived**](https://github.com/RisingOS-Revived)
+* [**LOSModified**](https://github.com/LOSModified)

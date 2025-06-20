@@ -51,11 +51,11 @@
   <project path="lineage-sdk" name="GemifyOS/android_lineage-sdk" />
   <project path="vendor/lineage" name="GemifyOS/android_vendor_lineage" />
   <project path="vendor/thirdparty" name="GemifyOS/android_vendor_thirdparty" clone-depth="1" />
-  <project path="vendor/google/overlays/ThemeIcons" name="android_vendor_google_overlays_ThemeIcons" />
-  <project path="vendor/pixel-style" name="android_vendor_pixel-style" />
-  <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" />
+  <project path="vendor/google/overlays/ThemeIcons" name="GemifyOS/android_vendor_google_overlays_ThemeIcons" />
+  <project path="vendor/pixel-style" name="GemifyOS/android_vendor_pixel-style" />
+  <project path="vendor/pixeloverlays" name="GemifyOS/android_vendor_pixeloverlays" />
   <project path="vendor/gms" name="vendor_gms" remote="evo-codeberg" clone-depth="1" revision="vic" />
-  <project path="vendor/microg" name="android_vendor_microg" />
+  <project path="vendor/microg" name="GemifyOS/android_vendor_microg" />
 
   <!-- CodeLinaro Additions Modified -->
   <project path="device/qcom/sepolicy-legacy-um" name="GemifyOS/android_device_qcom_sepolicy" groups="qcom,sdm660" revision="lineage-22.2-legacy-um" />

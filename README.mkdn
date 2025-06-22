@@ -58,7 +58,11 @@ Building the firmware
 ```
 
 ```bash
-brunch devicecodename
+lunch lineage_device-bp1a-userdebug
+```
+
+```bash
+make bacon -j$(nproc --all)
 ```
 
 redits
